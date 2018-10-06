@@ -60,6 +60,6 @@ data <- data[,c(colnames(data[1:2]), colnames(data[c(9)]),
 data <- mutate(data, num = 1:nrow(data))
 data <- data[,c("num", colnames(data[1:74]))]
 
-setwd("~/HMM/output")
+setwd("~/EMA/output")
 save(data, file = "EMA_data.RData")
 write.csv(data, file = "EMA_data.csv")

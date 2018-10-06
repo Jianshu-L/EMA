@@ -1,7 +1,7 @@
 library(rjson)
 library(plyr)
 library(tidyverse)
-load("~/HMM/output/EMA_data.RData")
+load("~/EMA/output/EMA_data.RData")
 setwd("/Users/ljs/Desktop/Hidden Markov/dataset/dataset/EMA")
 a <- fromJSON(file = dir()[1])
 b <- c()
@@ -18,7 +18,7 @@ for (i in 1:length(a)){
 }
 data_define <- data_define[order(as.character(data_define$data_type)), ]
 
-setwd("~/HMM/output")
+setwd("~/EMA/output")
 save(data_define, file = "EMA_define.RData")
 write.csv(data_define, file = "EMA_define.csv")
 

@@ -1,7 +1,7 @@
 library(rjson)
 library(plyr)
 library(tidyverse)
-load("~/HMM/output/EMA_data.RData")
+load("~/EMA/output/EMA_data.RData")
 
 # check the value of location
 a <- data.frame(unique(data$location))
@@ -94,7 +94,7 @@ empty_row <- no_null_NA
 resp_norm <- rbind(null_NA, null_noise, 
                    null_loc_12345, null_loc_others, null_loc)
 
-setwd("~/HMM/output")
+setwd("~/EMA/output")
 save(unknown, file = "EMA_Unknown.RData")
 write.csv(unknown, file = "EMA_Unknown.csv")
 save(empty_all, file = "EMA_Empty_all.RData")
